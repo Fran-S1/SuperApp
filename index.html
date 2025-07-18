@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SuperCalculadora </title>
+
+    <!--Scripts-->
+    <script defer src="../1_JS/0_Main.js"></script>
+    <script defer src="../1_JS/1_descuentoGeneral.js"></script>
+    <script defer src="../1_JS/2_descuentoVerduleria.js"></script>
+    <script defer src="../1_JS/3_calculadoraDefinitiva.js"></script>
+    <script defer src="../1_JS/cambiarFondo.js"></script>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="../2_CSS/0_General.css">
+    <link rel="stylesheet" href="../2_CSS/1_popups.css">
+    <link rel="stylesheet" href="../2_CSS/2_botones.css">
+    <link rel="stylesheet" href="../2_CSS/3_calculadora.css">
+    <link rel="stylesheet" href="../2_CSS/4_@media.css">
+    
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=DotGothic16&family=Pacifico&family=Russo+One&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="fondo-monocromatico fondo-super ">
+
+    <div id="overlay" ></div>
+    <h1 id="titulo"> Super Calculadora </h1>
+    
+    <div id="caja-inicio" class="caja-default"> 
+
+        <h3>Elegi una opcion para tener control de tus gastos</h3> 
+
+        <div id="botones-inicio">
+            <button id="productos" class="botones" > Descuento En Productos </button>
+            <button id="productosXkg" class="botones" > Descuento En Verduleria</button>
+            <button id="calculadoraDef" class="botones"> Calculadora definitiva </button>
+        </div>
+    </div>
+
+    <div id="elegir-fondo">
+        <button id="boton-monocromatico" class="opciones-fondo"></button>
+        <button id="boton-gradient" class="opciones-fondo"></button>
+        <button id="boton-super" class="opciones-fondo"></button>
+    </div>
+
+    <div id="popup-productos" class="caja-default popups"style="visibility: hidden;">
+
+        <h3>Descuento General</h3> 
+
+        <div id="caja-inputs-productos" class="caja-inputs">
+            <label for="nombre-producto" class="etiqueta"> Producto </label>
+            <input type="text" id="nombre-producto" class="input" placeholder="Ingrese el nombre de un producto"> 
+            <div id="error-nombre" class="error" style="visibility: hidden;"> Nombre de producto no ingresado </div>
+            
+            <label class="etiqueta" for="precio-producto"> Precio </label>
+            <input type="number" pattern="\d*" id="precio-producto" class="input" placeholder="Ingrese el precio del producto"> 
+            <div id="error-precio" class="error" style="visibility: hidden;"> Precio no ingresado </div>
+            
+            <label class="etiqueta" for="porcentaje-descuento"> Descuento (%) </label>
+            <input type="number" pattern="\d*" id="porcentaje-descuento" class="input" placeholder="Ingrese el descuento del producto">
+            <div id="error-porcentaje" class="error" style="visibility: hidden;"> Descuento no ingresado o mayor a 100 </div>
+        </div>
+
+        <div class="opciones">
+            <button class="atras botones"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor">
+                <path d="m480-320 56-56-64-64h168v-80H472l64-64-56-56-160 160 160 160Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+            </svg>
+            </button>
+
+            <button id="agregar-producto" class="botones-agregar botones"> 
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor">
+                    <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                </svg>
+            </button>
+        </div>
+
+        <button id="finalizar" class="finalizar botones"> finalizar </button>
+    </div>
+
+    <div id="popup-verduleria" class="caja-default popups" style="visibility: hidden;">
+
+        <h3>Descuento Verduleria</h3> 
+
+        <div id="caja-inputs-verduleria" class="caja-inputs">
+            <label  for="nombre-verfrutas" class="etiqueta"> Nombre </label>
+            <input type="text" id="nombre-verfrutas" class="input" placeholder="Ingrese el nombre de una fruta o verdura"> 
+            <div id="error-nombre2" class="error" style="visibility: hidden;"> Nombre de producto no ingresado </div>
+            
+            <label class="etiqueta" for="precio-kg"> Precio (kg) </label>
+            <input type="number" id="precio-kg" class="input" placeholder="Ingrese el precio del kg">
+            <div id="error-precioKg" class="error" style="visibility: hidden;"> Precio no ingresado </div>
+            
+            <label class="etiqueta" for="kg-llevados"> Lleva </label>
+            <input type="number" id="kg-llevados" class="input" placeholder="Ingrese cuantos kg lleva">
+            <div id="error-KgLlevados" class="error" style="visibility: hidden;"> Kilogramos no ingresados </div>
+            
+            <label class="etiqueta" for="porcentaje-descuento2"> Descuento (%) </label>
+            <input type="number" id="porcentaje-descuento2" class="input" placeholder="Ingrese el porcentaje de descuento">
+            <div id="error-porcentaje2" class="error" style="visibility: hidden;"> Descuento no ingresado o mayor a 100 </div>
+        </div>
+
+        <div class="opciones">
+            <button class="atras botones">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor">
+                    <path d="m480-320 56-56-64-64h168v-80H472l64-64-56-56-160 160 160 160Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                </svg>
+            </button>
+
+            <button id="agregar-verfruta" class="botones-agregar botones">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor">
+                    <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                </svg>
+            </button>
+        </div>
+
+        <button id="finalizar2" class="finalizar botones"> finalizar </button>
+    </div>
+
+    <div id="popup-ticket" class="caja-default" style="display: none;">
+        <pre id="ticket"></pre>
+        <button id="boton-inicio" class="botones"> 
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+            <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+            </svg> 
+        </button>
+    </div>
+
+    <div id="popup-calculadoraDef" class="caja-default popups">
+        <h3>Calculadora Definitiva</h3>
+        
+    <div id="pruebaAgregar">
+        <label for="escribir-item" class="etiqueta"> Agregar Item </label> 
+        <input type="text" id="escribir-item" class="input" placeholder="Ingrese un item">
+        <button id="agregar-item"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 10a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-8ZM10 14v-3m0 3v3m0-3h3m-3 0H7"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/></g></svg> </button>
+        <button id="actualizarLista">  </button>
+    </div>
+        <ul id="lista-items"></ul>
+        <button id="btnTotal">TOTAL: $0 (Actualizar)</button>
+        <button id="atrasCalculadora" class="botones atras"> atras </button>
+    </div>
+</body>
+</html>
