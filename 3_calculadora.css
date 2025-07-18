@@ -77,7 +77,6 @@ li {
     width: 25px;
     background: url("add.svg") no-repeat center;
     background-size: contain;
-    background-color: red;
     border: none;
     cursor: pointer;
     margin-right: 10px;
