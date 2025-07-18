@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    background: linear-gradient(to bottom,#E38A50,#f55353);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+#overlay {
+    position: fixed;
+    background-color: #000000c7;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+}
+
+#titulo {
+    margin-top: 20px;
+    background-color: #fdf1e4;
+    color: #944B45;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 2px solid black;
+    cursor: default;
+    font-family: 'Tektur', sans-serif;
+}
+h3 {
+    color: #ffffff;
+    border: 2px solid black;
+    background-color: #F55353;
+    /* display: inline-block; */
+    padding: 22px 10px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: default;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+#error-porcentaje {
+    color: #F55353;
+    font-size: 13px;
+}
+.error {
+    color: #F55353;
+    font-size: 13px;
+    margin-bottom: 5px;
+
+    /* evitar cambio sutil de texto */
+    backface-visibility: hidden;
+}
+
+#elegir-fondo{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.fondo-monocromatico {
+    background: linear-gradient(135deg ,rgb(35, 35, 35),#ada29a,rgb(35, 35, 35));
+    background-attachment: fixed;
+}
+.fondo-super {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/013/700/130/original/sales-during-shopping-and-purchase-concept-happy-young-woman-cartoon-character-rolling-shopping-bag-full-of-discount-purchases-shopping-illustration-vector.jpg');
+    background-size: cover;
+}
+
+/* Copilot: saca flechitas de los inputs numericos */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

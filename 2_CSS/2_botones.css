@@ -1,0 +1,85 @@
+.botones {
+    border: none;
+    padding: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 190px;
+    color: #ffffff;
+    background-color: #e98d50f3;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-family: 'Tektur', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+.botones:hover{
+    background-color: #FCD6BD;        
+    color: #e98d50f3;                   
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+#botones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.atras, .botones-agregar {
+    padding: 6px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.finalizar {
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    font-size: 17px;
+}
+
+#boton-inicio {
+    padding: 10px;
+    background-color: rgb(27, 27, 27);
+    color: rgb(201, 201, 201);
+    border-color: rgb(201, 201, 201);
+    margin-top: 35px;
+    width: 50px;
+}
+#boton-inicio:hover {
+    background-color: rgb(201, 201, 201);
+    color: rgb(19, 19, 19);
+    border-color: rgb(19, 19, 19);
+}
+
+.opciones-fondo {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border: solid 2px black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.opciones-fondo:hover {
+    transform: scale(0.90);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+#boton-monocromatico {
+    background: linear-gradient(135deg ,rgb(35, 35, 35),#ada29a,rgb(35, 35, 35));
+}
+#boton-gradient {
+    background: linear-gradient(to bottom,#E38A50,#f55353);
+}
+#boton-super {
+    background: linear-gradient(to top,#FFCFAF,#C6825B)
+}
