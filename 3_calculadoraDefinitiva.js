@@ -11,12 +11,12 @@ agregarItem.addEventListener("click",()=>{
     cantItems.classList.add("cant-items")
 
     const btnSumar = document.createElement("button")
-    btnSumar.classList.add("sumar", "ReSum")
+    btnSumar.classList.add("sumar", "actualizarTotal")
     btnSumar.addEventListener("click",()=>{
         cantItems.textContent = Number(cantItems.textContent) + 1
     })
     const btnRestar = document.createElement("button")
-    btnRestar.classList.add("restar", "Resum")
+    btnRestar.classList.add("restar","actualizarTotal")
     btnRestar.addEventListener("click",()=>{
         if (cantItems.textContent >= 1){
             cantItems.textContent = Number(cantItems.textContent) - 1
@@ -55,32 +55,60 @@ agregarItem.addEventListener("click",()=>{
 
     listaItems.appendChild(li)
     nombreItem.value = ""
+
+    ////
+    const actualizarLista = document.getElementById("actualizarLista")
+    const total = document.getElementById("total")
+    let totalLista = 0
+
+    document.querySelectorAll(".actualizarTotal").forEach(boton =>{
+        boton.addEventListener("click",()=>{
+            const lis = document.querySelectorAll("li")
+            const allCantItems = document.querySelectorAll(".cant-items")
+            const allPrecios = document.querySelectorAll(".precioItem")
+            const allDescuentos = document.querySelectorAll(".cant-desc")
+            total.textContent = "0"
+
+            for(i=0; i<lis.length; i++){
+                const CantItemNumerico = Number(allCantItems[i].textContent)
+                const PrecioNumerico = Number(allPrecios[i].value)
+                const cantPorPrecio = CantItemNumerico * PrecioNumerico
+                const DescuentoNumerico = Number(allDescuentos[i].value)
+
+                const preSubtotal = cantPorPrecio * (DescuentoNumerico / 100)
+                const subtotal = cantPorPrecio - preSubtotal
+
+                totalLista += subtotal
+            }
+            let mostrarTotal = Number(total.textContent) + totalLista
+            totalLista = 0
+            total.textContent = "TOTAL: $" + mostrarTotal
+        
+        })
+    })
+    precioItem.addEventListener("input",()=>{
+        const lis = document.querySelectorAll("li")
+        const allCantItems = document.querySelectorAll(".cant-items")
+        const allPrecios = document.querySelectorAll(".precioItem")
+        const allDescuentos = document.querySelectorAll(".cant-desc")
+        total.textContent = "0"
+
+        for(i=0; i<lis.length; i++){
+            const CantItemNumerico = Number(allCantItems[i].textContent)
+            const PrecioNumerico = Number(allPrecios[i].value)
+            const cantPorPrecio = CantItemNumerico * PrecioNumerico
+            const DescuentoNumerico = Number(allDescuentos[i].value)
+
+            const preSubtotal = cantPorPrecio * (DescuentoNumerico / 100)
+            const subtotal = cantPorPrecio - preSubtotal
+
+            totalLista += subtotal
+        }
+        let mostrarTotal = Number(total.textContent) + totalLista
+        totalLista = 0
+        total.textContent = "TOTAL: $" + mostrarTotal
+        
+    })
 })
 
-const actualizarLista = document.getElementById("actualizarLista")
-const total = document.getElementById("total")
-let totalLista = 0
 
-actualizarLista.addEventListener("click",()=>{
-    const lis = document.querySelectorAll("li")
-    const allCantItems = document.querySelectorAll(".cant-items")
-    const allPrecios = document.querySelectorAll(".precioItem")
-    const allDescuentos = document.querySelectorAll(".cant-desc")
-    total.textContent = "0"
-
-    for(i=0; i<lis.length; i++){
-        const CantItemNumerico = Number(allCantItems[i].textContent)
-        const PrecioNumerico = Number(allPrecios[i].value)
-        const cantPorPrecio = CantItemNumerico * PrecioNumerico
-        const DescuentoNumerico = Number(allDescuentos[i].value)
-
-        const preSubtotal = cantPorPrecio * (DescuentoNumerico / 100)
-        const subtotal = cantPorPrecio - preSubtotal
-
-        totalLista += subtotal
-    }
-    let mostrarTotal = Number(total.textContent) + totalLista
-    totalLista = 0
-    total.textContent = "TOTAL: $" + mostrarTotal
-    
-})

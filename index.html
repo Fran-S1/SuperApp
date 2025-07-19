@@ -6,18 +6,18 @@
     <title> SuperCalculadora </title>
 
     <!--Scripts-->
-    <script defer src="0_Main.js"></script>
-    <script defer src="1_descuentoGeneral.js"></script>
-    <script defer src="2_descuentoVerduleria.js"></script>
-    <script defer src="3_calculadoraDefinitiva.js"></script>
-    <script defer src="cambiarFondo.js"></script>
+    <script defer src="../1_JS/0_Main.js"></script>
+    <script defer src="../1_JS/1_descuentoGeneral.js"></script>
+    <script defer src="../1_JS/2_descuentoVerduleria.js"></script>
+    <script defer src="../1_JS/3_calculadoraDefinitiva.js"></script>
+    <script defer src="../1_JS/cambiarFondo.js"></script>
 
     <!--Styles-->
-    <link rel="stylesheet" href="0_General.css">
-    <link rel="stylesheet" href="1_popups.css">
-    <link rel="stylesheet" href="2_botones.css">
-    <link rel="stylesheet" href="3_calculadora.css">
-    <link rel="stylesheet" href="4_@media.css">
+    <link rel="stylesheet" href="../2_CSS/0_General.css">
+    <link rel="stylesheet" href="../2_CSS/1_popups.css">
+    <link rel="stylesheet" href="../2_CSS/2_botones.css">
+    <link rel="stylesheet" href="../2_CSS/3_calculadora.css">
+    <link rel="stylesheet" href="../2_CSS/4_@media.css">
     
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,13 +137,11 @@
             <label for="escribir-item" class="etiqueta"> Agregar Item </label> 
             <input type="text" id="escribir-item" class="input" placeholder="Ingrese un item">
             <button id="agregar-item"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 10a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-8ZM10 14v-3m0 3v3m0-3h3m-3 0H7"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/></g></svg> </button>
-            
         </div>
             <ul id="lista-items"></ul>
         <div id="pruebaAtras">
             <button id="atrasCalculadora" class="botones atras"> X </button>
             <pre id="total">TOTAL: $0</pre>
-            <button id="actualizarLista"></button>
         </div>    
     </div>
 </body>
