@@ -58,10 +58,10 @@ agregarItem.addEventListener("click",()=>{
 })
 
 const actualizarLista = document.getElementById("actualizarLista")
-const total = document.getElementById("btnTotal")
+const total = document.getElementById("total")
 let totalLista = 0
 
-total.addEventListener("click",()=>{
+actualizarLista.addEventListener("click",()=>{
     const lis = document.querySelectorAll("li")
     const allCantItems = document.querySelectorAll(".cant-items")
     const allPrecios = document.querySelectorAll(".precioItem")
@@ -81,6 +81,6 @@ total.addEventListener("click",()=>{
     }
     let mostrarTotal = Number(total.textContent) + totalLista
     totalLista = 0
-    total.textContent = "TOTAL: $" + mostrarTotal + " (Actualizar)"
+    total.textContent = "TOTAL: $" + mostrarTotal
     
 })

@@ -11,11 +11,13 @@ h3{
 #caja-inicio {
     width: 385px;
 }
-#productos, #productosXkg, #calculadoraDef{
+#productos, #productosXkg{
     width: 250px;
 }
+#popup-calculadoraDef{
+    width: max-content;
+}
 .fondo-super{
-
     background-position: center;
 }
 
