@@ -41,7 +41,7 @@ li {
     cursor: pointer;
 }
 #actualizarLista{
-    background: url("iconos/dollar-money-svgrepo-com (1).svg") no-repeat center;
+    background: url("dollar-money-svgrepo-com (1).svg") no-repeat center;
     background-size: contain;
     background-color: #e98d50f3;
     border-radius: 10px;
@@ -58,7 +58,7 @@ li {
 .restar{
     height: 25px;
     width: 25px;
-    background: url("iconos/remove.svg") no-repeat center;
+    background: url("remove.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -77,7 +77,7 @@ li {
 .sumar{
     height: 25px;
     width: 25px;
-    background: url("iconos/add.svg") no-repeat center;
+    background: url("add.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -94,7 +94,7 @@ li {
 }
 
 .signoPrecio{
-    background: url("iconos/dollar-bag.svg") no-repeat center;
+    background: url("dollar-bag.svg") no-repeat center;
     background-size: cover;
     position: absolute;
     right: 140px;
@@ -111,7 +111,7 @@ li {
     border-radius: 2px;
 }
 .signoDescuento{
-    background: url("iconos/discount-svgrepo-com.svg");
+    background: url("discount-svgrepo-com.svg");
     background-size: cover;
     position: absolute;
     right: 37px;
