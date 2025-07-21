@@ -15,10 +15,19 @@ h3{
     width: 250px;
 }
 #popup-calculadoraDef{
-    width: max-content;
+    width: 400px;
+    padding: 10px;
+    min-height: fit-content;
+}
+.pruebaTexto{
+    width: 150px;
+}
+.simboloDescuento{
+    margin-left: 10px;
 }
 .fondo-super{
     background-position: center;
 }
 
 }
+
