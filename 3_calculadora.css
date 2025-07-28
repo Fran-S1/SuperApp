@@ -1,0 +1,203 @@
+#popup-calculadoraDef{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 550px;
+    margin-bottom: 10px;
+}
+#atrasCalculadora{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #F55353;
+}
+#atrasCalculadora:hover{
+    color: #F55353;
+    background-color: rgb(252, 214, 214);
+}
+.pruebaTexto, .pruebaTexto2{
+    width: 205px;
+    word-wrap: break-word; /* permite salto de línea */ 
+    margin-left: 10px;
+}
+li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: 2px solid white;
+    text-align: left;
+    margin-bottom: 7px;
+    padding: 7px;
+    font-family: "Delius", sans-serif;
+    font-size: larger;
+    text-transform: capitalize;
+}
+#agregar-item{ 
+    border: none;
+    height: 30px;
+    width: 30px;
+    padding: 1px;
+    border-radius: 6px;
+    background-color: #e98d50f3;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+#escribir-item{
+    text-transform: capitalize;
+}
+.restar{
+    height: 25px;
+    width: 25px;
+    background: url("iconos/remove.svg") no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+.cant-items{
+    height: 20px;
+    width: 20px;
+    cursor: default;
+    user-select: none;
+    font-weight: bold;
+    /*creo que centre el numero*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sumar{
+    height: 25px;
+    width: 25px;
+    background: url("iconos/add.svg") no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.inputsCalculadora{
+    border: none;
+    color: rgb(20, 20, 20); 
+    text-align: center;
+    font-family: "Pacifico", sans-serif;
+    font-size: 18px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.simboloPrecio{
+    background: url("iconos/dollar-bag.svg") no-repeat center;
+    background-size: cover;
+    margin-left: 10px;
+    height: 25px;
+    width: 25px;
+}
+.precioItem,.precioItem2{
+    margin-left: 5px;
+    width: 50px;
+    outline: 2px solid #36861D;
+    background-color: #a7e095;
+}
+.precioItem2::placeholder{
+    color: #60aa49;
+}
+.simboloDescuento{
+    background: url("iconos/discount-svgrepo-com.svg");
+    background-size: cover;
+    margin-left: 15px;
+    height: 30px;
+    width: 30px;
+}
+.cant-desc, .cant-desc2{
+    margin-left: 5px;
+    width: 22px;
+    background-color: #ffa2a2;
+    outline: solid 2px #e63333;
+}
+.simboloPeso{
+    background: url("iconos/balance-4-svgrepo-com.svg");
+    background-size: cover;
+    color: white;
+    height: 25px;
+    width: 25px;
+}
+.cantKg{
+    cursor: text;
+    font-weight: bold;
+    font-family: "Delius", sans-serif;
+    font-size: 15px;
+    color: white;
+    width: 40px;
+    text-align: center;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: 2px solid white;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+#etiquetaComprobar{
+    margin-left: 63px;
+    font-size: 13px;
+    color: #e98d50;
+    font-style: oblique;
+}
+#compruebaKg{
+    color: #36861D;
+}
+#h4Productos{
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: large;
+    font-style: italic;
+}
+#h4Verduleria{
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: large;
+    font-style: italic;
+}
+#total{
+    z-index: 20;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    outline: 2px solid black;
+    height: 40px;
+    border: none;
+    background-color: #e98d50;
+    border-radius: 10px;
+    width: 200px;
+    color: black;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pruebaAgregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+#pruebaAtras{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    bottom: 20px;
+}
+#crearTicket{
+    width: 30px;
+    height: 30px;
+    background-color: #e98d50f3;
+    border: none;
+    outline: 2px solid black;
+    padding: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SuperCalculadora </title>
+
+    <!--Scripts-->
+    <script defer src="../1_JS/0_Main.js"></script>
+    <script defer src="../1_JS/3_calculadoraDefinitiva.js"></script>
+    <script defer src="../1_JS/cambiarFondo.js"></script>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="../2_CSS/0_General.css">
+    <link rel="stylesheet" href="../2_CSS/1_popups.css">
+    <link rel="stylesheet" href="../2_CSS/2_botones.css">
+    <link rel="stylesheet" href="../2_CSS/3_calculadora.css">
+    <link rel="stylesheet" href="../2_CSS/4_@media.css">
+    
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=DotGothic16&family=Pacifico&family=Russo+One&family=Sriracha&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="fondo-monocromatico fondo-super ">
+
+    <div id="overlay" style="visibility: hidden;"></div>
+    <h1 id="titulo"> Super Calculadora </h1>
+    
+    <div id="caja-inicio" class="caja-default"> 
+
+        <h3> Crea una lista y genera un ticket para tener control sobre tus gastos </h3> 
+
+        <div id="botones-inicio">
+            <button id="calculadoraDef" class="botones"> Crear Lista </button>
+        </div>
+    </div>
+
+    <div id="popup-calculadoraDef" class="caja-default popups" style="visibility: hidden;">
+        
+        <h3>Calculadora Definitiva</h3>
+        
+        <div id="pruebaAgregar">
+            <label for="escribir-item" class="etiqueta"> Agregar Item </label> 
+            <!--<span id="testeo">
+            <button id="switch"></button>
+            </span>
+        -->
+
+            
+            <input type="text" id="escribir-item" class="input" placeholder="Ingrese un item">
+            <button id="agregar-item"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.9944 10.0011L11.9944 13.9989" stroke="#000000" stroke-width="1.69904" stroke-linecap="round"></path> <path d="M13.9933 12H9.99553" stroke="#000000" stroke-width="1.69904" stroke-linecap="round"></path> <path d="M20.8448 12V6.50968C20.8448 4.48821 19.2061 2.84949 17.1846 2.84949H6.50406C4.4826 2.84949 2.84387 4.48821 2.84387 6.50968V17.4903C2.84387 19.5117 4.4826 21.1504 6.50406 21.1504H11.8444" stroke="#000000" stroke-width="1.69904" stroke-linecap="round"></path> <path d="M20.7845 15.8827L18.8314 13.8971C18.6334 13.6957 18.3122 13.6957 18.1141 13.8971L14.3578 17.716C14.249 17.8266 14.1955 17.9813 14.2122 18.1368L14.427 20.1323C14.44 20.2525 14.5333 20.3474 14.6516 20.3605L16.6143 20.5789C16.7672 20.5959 16.9194 20.5415 17.0282 20.431L20.7845 16.612C20.9826 16.4106 20.9826 16.0841 20.7845 15.8827Z" stroke="#000000" stroke-width="1.69904" stroke-linecap="round"></path> </g></svg></button>
+            <button id="crearTicket"><svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M533 1024l-147.7-84.8-136.4 78.3h-11.3c-17.3 0-34.2-3.4-50.1-10.1-15.3-6.5-29.1-15.7-40.8-27.6-11.7-11.7-21-25.5-27.5-40.8-6.7-15.9-10.1-32.7-10.1-50.1V128.5c0-17.4 3.4-34.2 10.1-50.1 6.5-15.3 15.8-29.1 27.6-40.8 11.7-11.8 25.5-21 40.8-27.5C203.3 3.4 220.2 0 237.5 0h590.9c17.3 0 34.2 3.4 50.1 10.1 15.3 6.5 29.1 15.7 40.8 27.6 11.7 11.7 21 25.5 27.5 40.8 6.7 15.9 10.1 32.7 10.1 50.1V889c0 17.4-3.4 34.2-10.1 50.1-6.5 15.3-15.8 29.1-27.6 40.8-11.7 11.8-25.5 21-40.8 27.5-15.8 6.7-32.7 10.1-50 10.1h-11.3l-136.4-78.3L533 1024z m147.7-182.6l157.2 90.3c2.5-0.6 5-1.4 7.5-2.4 5.2-2.2 9.9-5.4 13.9-9.4 4.1-4.1 7.2-8.7 9.4-14 2.3-5.3 3.4-11.1 3.4-17V128.5c0-5.9-1.1-11.7-3.4-17-2.2-5.2-5.4-9.9-9.4-13.9-4.1-4.1-8.7-7.2-13.9-9.4-5.4-2.3-11.1-3.4-17-3.4H237.5c-5.9 0-11.6 1.1-17 3.4-5.2 2.2-9.9 5.4-13.9 9.4-4.1 4.1-7.2 8.7-9.4 14-2.3 5.3-3.4 11.1-3.4 17V889c0 5.9 1.1 11.7 3.4 17 2.2 5.2 5.4 9.9 9.4 13.9 4.1 4.1 8.7 7.2 13.9 9.4 2.4 1 4.9 1.8 7.5 2.4l157.2-90.3L533 926.2l147.7-84.8z" fill="#000000"></path><path d="M490.6 310.9H321c-23.4 0-42.4-19-42.4-42.4s19-42.4 42.4-42.4h169.6c23.4 0 42.4 19 42.4 42.4s-19 42.4-42.4 42.4zM702.5 487.6H321c-23.4 0-42.4-19-42.4-42.4s19-42.4 42.4-42.4h381.6c23.4 0 42.4 19 42.4 42.4-0.1 23.4-19 42.4-42.5 42.4z" fill="currentcolor"></path></g></svg></button>
+        </div>
+        <label for="compruebaKg" id="etiquetaComprobar">Item por Kg?</label> 
+        <input id="compruebaKg" type="checkbox">
+
+        <h4 id="h4Productos" style="display: none;">Seccion: Productos</h4>
+        <ul id="lista-items">
+            <!--prueba (NO ELIMINAR... otra vez)
+            <li>
+            <button class="restar"></button>
+            <span class="cant-items">1</span>
+            <button class="sumar"></button>
+            <span class="pruebaTexto"></span>
+            <span class="simboloPrecio"></span>
+            <input class="precioItem inputsCalculadora">
+            <span class="a"><svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:currentColor;} </style> <g> <path class="st0" d="M512,339.979h-0.447l-78.911-181.464c7.507,2.712,13.862,5.052,18.787,6.901l9.242-24.513 c-26.263-9.878-90.312-32.634-160.397-53.254c0-10.817-4.432-20.665-11.522-27.755c-7.075-7.106-16.953-11.499-27.771-11.499 c-10.817,0-20.718,4.394-27.786,11.499c-2.333,2.318-4.348,4.939-6.022,7.803C157.761,50.151,92.902,37.357,65.745,32.569 l-4.552,25.794c5.749,1.015,13.317,2.416,22.332,4.159L0.454,253.545H0c0.06,0.197,0.129,0.394,0.189,0.591l-0.167,0.386 l0.342,0.151c12.817,40.619,50.754,70.078,95.599,70.078c44.852,0,82.79-29.46,95.599-70.078l0.349-0.151l-0.167-0.386 c0.061-0.197,0.129-0.394,0.19-0.591h-0.455L110.772,67.961c30.975,6.371,70.479,15.098,111.34,25.445 c1.257,8.545,5.265,16.249,11.082,22.028c3.424,3.447,7.53,6.242,12.068,8.227v276.373c-17.734,0-31.543,0-31.543,0 s-7.56,47.27-41.588,54.814v24.582h177.692v-24.582c-34.02-7.544-41.588-54.814-41.588-54.814s-13.809,0-31.543,0V123.661 c4.53-1.985,8.628-4.78,12.06-8.227c0.963-0.97,1.909-1.984,2.772-3.06c41.732,12.264,81.547,25.369,112.325,35.997 l-83.327,191.608h-0.454c0.06,0.204,0.128,0.394,0.197,0.591l-0.174,0.386l0.34,0.151c12.818,40.618,50.754,70.078,95.606,70.078 c44.846,0,82.782-29.453,95.599-70.07l0.341-0.159l-0.167-0.386C511.871,340.373,511.947,340.183,512,339.979z M174.343,253.545 H17.59L95.97,73.317L174.343,253.545z M275.783,102.481c-1.546,1.538-3.326,2.871-5.296,3.841 c-2.825,1.492-6.045,2.311-9.507,2.311c-5.81,0-10.999-2.334-14.824-6.152c-1.068-1.106-2.046-2.28-2.879-3.59 c-2.068-3.227-3.249-7.045-3.249-11.211c0-5.818,2.333-11.006,6.128-14.832c0.084-0.076,0.159-0.151,0.243-0.205 c3.795-3.674,8.87-5.915,14.582-5.915c5.818,0,11.007,2.332,14.803,6.12c2.537,2.545,4.454,5.712,5.424,9.272 c0.469,1.758,0.734,3.621,0.734,5.56C281.941,93.497,279.608,98.678,275.783,102.481z M337.657,339.979l78.38-180.23l78.373,180.23 H337.657z"></path> </g> </g></svg></span>
+            <input type="number" style="width: 42px; margin-left: 5px;" class="inputsCalculadora">
+            <span class="simboloDescuento"></span>
+            
+            <input class="cant-desc inputsCalculadora">
+            </li>-->
+        </ul>
+        <h4 id="h4Verduleria" style="display: none;">Seccion: Verduleria</h4>
+        <ul id="listaKg">
+        </ul>
+        <div id="pruebaAtras">
+            <button id="atrasCalculadora" class="botones atras"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#000000" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"></path></g></svg></button>
+            <pre id="total">TOTAL: $0.00</pre>
+        </div>     
+    </div>
+
+    <div id="popup-ticket" class="caja-default" style="display: none;">
+        <pre id="ticket"></pre>
+        <button id="boton-inicio" class="botones"> 
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+            <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+            </svg> 
+        </button>
+        <!--<button>imprimir ticket</button>-->
+    </div>
+    
+    <div id="elegir-fondo">
+        <button id="boton-monocromatico" class="opciones-fondo"></button>
+        <button id="boton-gradient" class="opciones-fondo"></button>
+        <button id="boton-super" class="opciones-fondo"></button>
+    </div>    
+</body>
+</html>

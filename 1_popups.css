@@ -1,0 +1,54 @@
+.caja-default {
+    background-color: #333333b2;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.popups{
+    background-color: #333333;
+    z-index: 10;
+}
+.caja-inputs {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.etiqueta {
+    font-size: large;
+    margin-left: 0px;
+    align-self: flex-start;
+    font-weight: 800;
+}
+.input {
+    align-content: center;
+    outline: 2px solid black;
+    border: none;
+    height: 25px;
+    border-radius: 4px;
+}
+
+#popup-ticket {
+    z-index: 10;
+    background-color: #333333;
+    padding: 20px;
+}
+#ticket {
+    text-align: left;
+    font-size: 16px;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    text-transform: capitalize;
+}
