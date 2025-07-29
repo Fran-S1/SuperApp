@@ -218,7 +218,9 @@ crearTicket.addEventListener("click",()=>{
         "------------------------------" + "\n"
     }
 
-    popupTicket.style="visibility: visible"
-    popupCalculadoraDef.style="visibility: hidden"
+    if (tickeTXT.textContent != ""){
+        popupTicket.style="visibility: visible"
+        popupCalculadoraDef.style="visibility: hidden"                
+    }
 })
 
