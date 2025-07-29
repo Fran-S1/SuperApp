@@ -42,6 +42,7 @@ overlay.addEventListener("click",()=>{
     popupCalculadoraDef.style="visibility: hidden"
     popupTicket.style="visibility: hidden"
     overlay.style="visibility: hidden"
+    tickeTXT.textContent = ""
 })
 
 // ERROR //
