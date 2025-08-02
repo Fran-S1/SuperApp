@@ -6,6 +6,19 @@ const crearTicket = document.getElementById("crearTicket")
 const compruebaKg = document.getElementById("compruebaKg")
 const SeccionProductos = document.getElementById("h4Productos")
 const SeccionVerduleria = document.getElementById("h4Verduleria")
+const cambiarTipo = document.getElementById("cambiarTipo")
+
+let esUnidad = true
+cambiarTipo.addEventListener("click",()=>{
+    if (cambiarTipo.textContent === "Unidad"){
+       cambiarTipo.textContent = "Por Peso" 
+       esUnidad = false
+    }
+    else{
+        cambiarTipo.textContent = "Unidad"
+        esUnidad = true
+    }
+})
 
 // FUNCIONES //
 function formarLi (){
@@ -53,7 +66,7 @@ function formarLi (){
     //  CREAR LI //
 
     li.appendChild(btnRestar)
-    if (compruebaKg.checked){
+    if (esUnidad === false){
         li.classList.add("liVerduleria")
         btnRestar.addEventListener("click",()=>{
             listaKg.removeChild(li)
@@ -120,6 +133,9 @@ function calcularTotal (){
 
         totalLista += subtotal
     }
+    if (lis.length < 1){
+    SeccionProductos.style.display="none"
+    }
 
     const lis2 = document.querySelectorAll(".liVerduleria")
     const inpKg = document.querySelectorAll(".cantKg")
@@ -136,7 +152,10 @@ function calcularTotal (){
 
         totalLista += subtotal2
     }
-
+    if (lis2.length < 1){
+        SeccionVerduleria.style.display="none"
+    }
+    
     let mostrarTotal = Number(total.textContent) + totalLista
     totalLista = 0
     
@@ -193,9 +212,16 @@ crearTicket.addEventListener("click",()=>{
         
         tickeTXT.textContent += 
         'producto: "' + nombreDeItems[i].textContent + '"(' + allCantItems[i].textContent + ')' + "\n" +
-        "precio: $" + cantPorPrecio + "\n" +
-        "descuento: $" + preSubtotal.toFixed(2) + "\n" +
-        "------------------------------" + "\n"
+        "precio: $" + cantPorPrecio + "\n"
+
+        if(DescuentoNumerico == 0){   
+            tickeTXT.textContent += "------------------------------" + "\n"
+        }
+        else{
+            tickeTXT.textContent +=    
+            "descuento: $" + preSubtotal.toFixed(2) + "\n" +
+            "------------------------------" + "\n"
+        }
     }
 
     const lis2 = document.querySelectorAll(".liVerduleria")
@@ -213,9 +239,16 @@ crearTicket.addEventListener("click",()=>{
 
         tickeTXT.textContent += 
         'producto: "' + nombreDeItems2[i].textContent + '"(' + inpKg[i].value + 'kg)' + "\n" +
-        "precio: $" + ReglaDe3 + "\n" +
-        "descuento: $" + preSubtotal2.toFixed(2) + "\n" +
-        "------------------------------" + "\n"
+        "precio: $" + ReglaDe3 + "\n"
+
+        if(DescuentoNumerico2 == 0){   
+            tickeTXT.textContent += "------------------------------" + "\n"
+        }
+        else{
+            tickeTXT.textContent +=    
+            "descuento: $" + preSubtotal2.toFixed(2) + "\n" +
+            "------------------------------" + "\n"
+        }
     }
 
     if (tickeTXT.textContent != ""){

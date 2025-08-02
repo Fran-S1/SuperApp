@@ -17,6 +17,7 @@ const boton_calculadoraDef = document.getElementById("calculadoraDef")
 boton_calculadoraDef.addEventListener("click",()=>{
     popupCalculadoraDef.style="visibility: visible"
     overlay.style="visibility: visible"
+    boton_calculadoraDef.textContent = "Lista"
 })
 
 // BOTONES //
@@ -34,7 +35,7 @@ document.querySelectorAll(".atras").forEach(boton => {
             /*errores.forEach(function(erroress){
                 erroress.style.visibility="hidden"
             })*/ 
-        })
+    })
 })
 
 // CLICK IN OVERLAY //

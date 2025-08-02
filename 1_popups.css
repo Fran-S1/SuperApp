@@ -18,13 +18,6 @@
     background-color: #333333;
     z-index: 10;
 }
-.caja-inputs {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
 .etiqueta {
     font-size: large;
     margin-left: 0px;
@@ -44,6 +37,10 @@
     background-color: #333333;
     padding: 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    overflow-y: scroll;
+    padding-left: 28px;
 }
 #ticket {
     text-align: left;

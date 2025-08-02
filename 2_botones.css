@@ -8,7 +8,7 @@
     background-color: #e98d50f3;
     border: 2px solid black;
     text-transform: uppercase;
-    font-family: 'Tektur', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 600;
     transition: transform 0.2s ease;
@@ -26,25 +26,13 @@
     gap: 40px;
     margin-top: 40px;
 }
-
-.opciones {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.atras, .botones-agregar {
+.atras{
     padding: 6px;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     
-}
-.finalizar {
-    margin-top: 10px;
-    padding: 15px;
-    width: 100%;
-    font-size: 17px;
 }
 
 #boton-inicio {

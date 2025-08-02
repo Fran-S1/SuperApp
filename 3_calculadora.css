@@ -1,8 +1,27 @@
 #popup-calculadoraDef{
-    margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     width: 550px;
-    margin-bottom: 10px;
+    max-height: 96vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 30px;
+    padding-left: 38px;
+}
+#popup-calculadoraDef::-webkit-scrollbar, #popup-ticket::-webkit-scrollbar{
+    width: 8px;
+}
+#popup-calculadoraDef::-webkit-scrollbar-track, #popup-ticket::-webkit-scrollbar-track{
+    background: #0059ff00; /* fondo del track */
+    border-radius: 10px;
+}
+#popup-calculadoraDef::-webkit-scrollbar-thumb, #popup-ticket::-webkit-scrollbar-thumb {
+    background-color: #525252; /* color de la barra */
+    border-radius: 10px;
+    /*border: 2px solid #ffffff;  espacio alrededor de la barra */
+}
+#popup-calculadoraDef::-webkit-scrollbar-thumb:hover, #popup-ticket::-webkit-scrollbar-thumb:hover {
+    background-color: #747272;
+    width: 200px;
 }
 #atrasCalculadora{
     width: 40px;
@@ -13,7 +32,7 @@
 }
 #atrasCalculadora:hover{
     color: #F55353;
-    background-color: rgb(252, 214, 214);
+    background-color: rgb(255, 150, 150);
 }
 .pruebaTexto, .pruebaTexto2{
     width: 205px;
@@ -50,7 +69,7 @@ li {
 .restar{
     height: 25px;
     width: 25px;
-    background: url("remove.svg") no-repeat center;
+    background: url("iconos/remove.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -69,7 +88,7 @@ li {
 .sumar{
     height: 25px;
     width: 25px;
-    background: url("add.svg") no-repeat center;
+    background: url("iconos/add.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -86,7 +105,7 @@ li {
 }
 
 .simboloPrecio{
-    background: url("dollar-bag.svg") no-repeat center;
+    background: url("iconos/dollar-bag.svg") no-repeat center;
     background-size: cover;
     margin-left: 10px;
     height: 25px;
@@ -102,7 +121,7 @@ li {
     color: #60aa49;
 }
 .simboloDescuento{
-    background: url("discount-svgrepo-com.svg");
+    background: url("iconos/discount-svgrepo-com.svg");
     background-size: cover;
     margin-left: 15px;
     height: 30px;
@@ -113,6 +132,13 @@ li {
     width: 22px;
     background-color: #ffa2a2;
     outline: solid 2px #e63333;
+}
+.simboloPeso{
+    background: url("iconos/balance-4-svgrepo-com.svg");
+    background-size: cover;
+    color: white;
+    height: 25px;
+    width: 25px;
 }
 .cantKg{
     cursor: text;
@@ -173,24 +199,34 @@ li {
     align-items: center;
     gap: 8px;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 #pruebaAtras{
     position: sticky;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    bottom: 20px;
+    background-color: #333333;
+    padding: 20px;
+    margin-left: -20px;
+    bottom: 0px;
+    width: 510px;
 }
 #crearTicket{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
     background-color: #e98d50f3;
     border: none;
     outline: 2px solid black;
-    padding: 2px;
+    padding: 6px;
     border-radius: 6px;
     cursor: pointer;
+}
+#cambiarTipo{
+    padding: 4px;
+    width: max-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #161616;
 }

@@ -13,6 +13,7 @@ body {
     color: #333;
     text-align: center;
     background-attachment: fixed;
+    height: 100vh;
 }
 
 #overlay {
@@ -79,23 +80,6 @@ h3 {
     background-size: cover;
 }
 
-/*#switch{
-    background-image: url("iconos/milk-products-svgrepo-com.svg");
-    background-size: cover;
-    background-color: rgba(240, 248, 255, 0);
-    height: 20px;
-    width: 20px;
-    border: none;
-}
-#testeo{
-    background-image: url("iconos/refresh-cw-alt-2-svgrepo-com.svg");
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
 /* Copilot: saca flechitas de los inputs numericos */
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
