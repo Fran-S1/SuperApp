@@ -1,5 +1,7 @@
 @media (max-width: 600px) {
-
+body{
+    min-height: 100dvh;
+}
 h3{
     font-size: 16.8px;
 }
@@ -33,4 +35,5 @@ h3{
 }
 
 }
+
 
