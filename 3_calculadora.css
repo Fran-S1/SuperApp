@@ -69,7 +69,7 @@ li {
 .restar{
     height: 25px;
     width: 25px;
-    background: url("iconos/remove.svg") no-repeat center;
+    background: url("remove.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -88,7 +88,7 @@ li {
 .sumar{
     height: 25px;
     width: 25px;
-    background: url("iconos/add.svg") no-repeat center;
+    background: url("add.svg") no-repeat center;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -105,7 +105,7 @@ li {
 }
 
 .simboloPrecio{
-    background: url("iconos/dollar-bag.svg") no-repeat center;
+    background: url("dollar-bag.svg") no-repeat center;
     background-size: cover;
     margin-left: 10px;
     height: 25px;
@@ -121,7 +121,7 @@ li {
     color: #60aa49;
 }
 .simboloDescuento{
-    background: url("iconos/discount-svgrepo-com.svg");
+    background: url("discount-svgrepo-com.svg");
     background-size: cover;
     margin-left: 15px;
     height: 30px;
@@ -134,7 +134,7 @@ li {
     outline: solid 2px #e63333;
 }
 .simboloPeso{
-    background: url("iconos/balance-4-svgrepo-com.svg");
+    background: url("balance-4-svgrepo-com.svg");
     background-size: cover;
     color: white;
     height: 25px;
@@ -229,4 +229,5 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     background-color: #161616;
+
 }
