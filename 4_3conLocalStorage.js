@@ -356,9 +356,3 @@ crearTicket.addEventListener("click",()=>{
     }
 })
 
-borrarLista = document.getElementById("borrarLista")
-borrarLista.addEventListener("click",()=>{
-    listaItems.innerHTML= ""
-    listaKg.innerHTML= ""
-    localStorage.clear()
-})
