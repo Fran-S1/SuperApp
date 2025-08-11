@@ -355,3 +355,10 @@ crearTicket.addEventListener("click",()=>{
         popupCalculadoraDef.style="visibility: hidden"                
     }
 })
+
+borrarLista = document.getElementById("borrarLista")
+borrarLista.addEventListener("click",()=>{
+    listaItems.innerHTML= ""
+    listaKg.innerHTML= ""
+    localStorage.clear()
+})
