@@ -29,8 +29,10 @@
     margin-right: 10px;
     border-radius: 10px;
     background-color: #F55353;
+    outline: solid 2px black;
+    border: none;
 }
-#atrasCalculadora:hover{
+#atrasCalculadora:hover, #borrarLista:hover{
     color: #F55353;
     background-color: rgb(255, 150, 150);
 }
@@ -235,4 +237,14 @@ li {
 
 }
 
+#borrarLista{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #F55353;
+    outline: solid 2px black;
+    border: none;
+    padding: 4px;
+}
 
